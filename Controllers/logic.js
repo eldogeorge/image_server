@@ -24,7 +24,7 @@ studentRegister = async (req, res) => {
             const newStudent = new students({ rollNo, fname, lname, email, password, mobile, gender, department, admissionQuota, profile: file, location })
             await newStudent.save()
 
-            res.status(206).json(newStudent)
+            res.status(203).json(newStudent)
         }
     }
     catch (err) {
@@ -140,7 +140,7 @@ editStudent = async (req, res) => {
             user.profile = file
 
             user.save()
-            res.status(202).json(user)
+            res.status(204).json(user)
         }
     }
     catch (err) {
@@ -152,6 +152,5 @@ editStudent = async (req, res) => {
 
 // LRS5 export studentRegister then goto routes.js
 module.exports = {
-    studentRegister, getAllStudents, getSingleStudent, studentLogin, removeStudent, editStudent,
-    facultyRegister, getAllFacultys, getSingleFaculty, removeFaculty, editFaculty, facultyLogin
+    studentRegister, getAllStudents, getSingleStudent, studentLogin, removeStudent, editStudent
 }

@@ -3,9 +3,8 @@
 //SPS1 import express
 const express=require('express')
 // LRS6 import studentregister
-const { studentRegister, getAllStudents, getSingleStudent, removeStudent, editStudent, studentLogin, facultyRegister, getAllFacultys, getSingleFaculty, removeFaculty, editFaculty, facultyLogin } = require('../Controllers/logic')
+const { studentRegister, getAllStudents, getSingleStudent, removeStudent, editStudent, studentLogin} = require('../Controllers/logic')
 const studentupload = require('../multerConfig/studentStorageConf')
-const facultyupload = require('../multerConfig/facultyStorageConf')
 
 
 
